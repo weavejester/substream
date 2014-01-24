@@ -14,7 +14,7 @@ This is necessary due to the limitations of
 
 To install, add the following to your project `:dependencies`:
 
-    [substream "0.1.0-SNAPSHOT"]
+    [substream "0.1.0"]
 
 ## Usage
 

@@ -1,4 +1,4 @@
-(defproject substream "0.1.0-SNAPSHOT"
+(defproject substream "0.1.0"
   :description "Library for subclassing InputStreams"
   :url "https://github.com/weavejester/substream"
   :license {:name "The MIT License"

@@ -1,10 +1,40 @@
-# substream
+# Substream
 
-A Clojure library designed to ... well, that part is up to you.
+Substream is a small library for constructing subclasses of
+`java.io.InputStream` from standard Clojure functions.
+
+This is necessary due to the limitations of
+[subclassing in clojure][1].
+
+[1]: http://tech.puredanger.com/2011/08/12/subclassing-in-clojure/
+
+## Installation
+
+To install, add the following to your project `:dependencies`:
+
+    [substream "0.1.0-SNAPSHOT"]
 
 ## Usage
 
-FIXME
+The `substream.core/input-stream` function will construct a new
+InputStream instance from a zero-argument Clojure function. The
+function can returns a value representing a byte from the stream. The
+return value may be an integer, byte or nil if the stream has ended.
+
+```clojure
+(require '[substream.core :as substream])
+
+(def data
+  (ref (seq (.getBytes "Hello World"))))
+
+(def stream
+  (substream/input-stream
+   #(dosync
+      (when (seq @state)
+        (let [value (first @state)]
+          (alter state next)
+          value))))
+```
 
 ## License
 

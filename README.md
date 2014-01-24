@@ -1,5 +1,7 @@
 # Substream
 
+[![Build Status](https://travis-ci.org/weavejester/substream.png?branch=master)](https://travis-ci.org/weavejester/substream)
+
 Substream is a small library for constructing subclasses of
 `java.io.InputStream` from standard Clojure functions.
 

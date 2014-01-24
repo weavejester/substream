@@ -14,6 +14,6 @@ public class FnInputStream extends InputStream
 
     public int read()
     {
-        return (int)readFunc.invoke();
+        return (Integer)readFunc.invoke();
     }
 }

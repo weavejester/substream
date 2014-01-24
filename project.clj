@@ -6,4 +6,7 @@
   :dependencies [[org.clojure/clojure "1.3.0"]]
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
-  :test-paths ["test/clojure"])
+  :test-paths ["test/clojure"]
+  :profiles
+  {:1.4 {:dependencies [[org.clojure/clojure "1.4.0"]]}
+   :1.5 {:dependencies [[org.clojure/clojure "1.5.1"]]}})
